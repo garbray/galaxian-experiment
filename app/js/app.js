@@ -1,1 +1,1 @@
-lala = 'lola';
+var lala = 'lola';
