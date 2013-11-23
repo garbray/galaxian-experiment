@@ -1,0 +1,11 @@
+{
+  "node": true,
+  "indent": 2,
+  "curly": true,
+  "eqnull": true,
+  "eqeqeq": true,
+  "undef": true,
+  "globals": {
+    "jQuery": true
+  }
+}

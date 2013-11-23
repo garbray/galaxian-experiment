@@ -1,0 +1,36 @@
+{
+  "name": "galaxian-experiment",
+  "version": "0.0.1",
+  "description": "simple test to comunicate a mobile device with a browser",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/garbray/galaxian-experiment.git"
+  },
+  "keywords": [
+    "nodejs",
+    "socketio",
+    "and",
+    "more"
+  ],
+  "author": "Bryan Garzon Bahamon",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/garbray/galaxian-experiment/issues"
+  },
+  "dependencies": {
+    "express": "~3.4.4",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-watch": "~0.5.3"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-contrib-compass": "~0.6.0"
+  }
+}
