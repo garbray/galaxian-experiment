@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     jshint: {
       files: {
-        src: ['app/js/*.js']
+        src: ['app/static/js/*.js']
       }
     },
     uglify: {
@@ -20,15 +20,15 @@ module.exports = function(grunt) {
     compass: {
       dev: {
         options: {
-          sassDir: 'app/sass',
-          cssDir: 'app/css',
+          sassDir: 'app/static/sass',
+          cssDir: 'app/static/css',
           raw: 'preferred_syntax = :sass\n'
         }
       },
       prod: {
         options: {
-          sassDir: 'app/sass',
-          cssDir: 'app/css',
+          sassDir: 'app/static/sass',
+          cssDir: 'app/static/css',
           raw: 'preferred_syntax = :sass\n',
           enviroment: 'production'
         }
@@ -36,20 +36,28 @@ module.exports = function(grunt) {
     },
     watch: {
       js: {
-        files: 'app/js/*.js',
-        task: ['jshint'],
+        files: 'app/static/js/*.js',
+        tasks: ['jshint'],
         options: {
           livereload: true
         }
       },
-      css: {
-        files: 'app/sass/*.sass',
-        task: ['compass'],
+      compass: {
+        files: 'app/static/sass/*.sass',
+        tasks: ['compass:dev'],
         options: {
           livereload: true
         }
       }
-    }
+    },
+    express: {
+      all: {
+        options: {
+          port: 3000,
+          bases: ['.']
+        }
+      }
+    },
   });
 
   grunt.loadNpmTasks('grunt-contrib-compass');
