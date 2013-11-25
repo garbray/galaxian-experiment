@@ -12,13 +12,16 @@ app.configure(function() {
 
   app.use( app.router );
 
-  app.use(express.static(path.join(application_root, 'app/static') ) );
+  app.set('views', __dirname + '/views');
+  app.engine('html', require('ejs').renderFile);
+
+  app.use(express.static(path.join(application_root, 'static') ) );
 
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
 
 app.get('/', function(req, res){
-  console.log(req.headers);
+  res.render('index.html');
 });
 
 

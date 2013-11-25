@@ -29,7 +29,8 @@
     "grunt-contrib-uglify": "~0.2.7",
     "grunt-contrib-watch": "~0.5.3",
     "path": "~0.4.9",
-    "socket.io": "~0.9.16"
+    "socket.io": "~0.9.16",
+    "ejs": "~0.8.5"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.7.2",
