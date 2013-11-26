@@ -1,8 +1,10 @@
-var application_root = __dirname,	 
+var application_root = __dirname,
+  http = require('http'),
   express = require('express'),
   path = require('path'),
-
-  app = express();
+  app = express(),
+  server = http.createServer(app),
+  io = require('socket.io').listen(server);
 
 
 app.configure(function() {
@@ -20,10 +22,26 @@ app.configure(function() {
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
 
+
+
+server.listen(3000);
+console.log('Listening on port 3000');
+
+//route to check if is mobile or is a desktop
 app.get('/', function(req, res){
-  res.render('index.html');
+  var ua = req.headers['user-agent'];
+  if(ua.match(/mobile/i)) {
+    res.render('index_mobile.html');
+  }else {
+    res.render('index.html');
+  }
 });
 
+//config socket
+io.sockets.on('connection', function(socket) {
+  socket.emit('news', {hello: 'world'});
+  socket.on('my other event', function(data) {
+    console.log(data);
+  });
+});
 
-app.listen(3000);
-console.log('Listening on port 3000');

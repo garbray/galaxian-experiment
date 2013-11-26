@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     jshint: {
       files: {
-        src: ['app/static/js/*.js']
+        src: ['static/js/*.js']
       }
     },
     uglify: {
@@ -20,15 +20,15 @@ module.exports = function(grunt) {
     compass: {
       dev: {
         options: {
-          sassDir: 'app/static/sass',
-          cssDir: 'app/static/css',
+          sassDir: 'static/sass',
+          cssDir: 'static/css',
           raw: 'preferred_syntax = :sass\n'
         }
       },
       prod: {
         options: {
-          sassDir: 'app/static/sass',
-          cssDir: 'app/static/css',
+          sassDir: 'static/sass',
+          cssDir: 'static/css',
           raw: 'preferred_syntax = :sass\n',
           enviroment: 'production'
         }
@@ -36,14 +36,14 @@ module.exports = function(grunt) {
     },
     watch: {
       js: {
-        files: 'app/static/js/*.js',
+        files: 'static/js/*.js',
         tasks: ['jshint'],
         options: {
           livereload: true
         }
       },
       compass: {
-        files: 'app/static/sass/*.sass',
+        files: 'static/sass/*.sass',
         tasks: ['compass:dev'],
         options: {
           livereload: true

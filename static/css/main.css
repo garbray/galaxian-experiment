@@ -63,7 +63,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 3, ../sass/main.sass */
+/* line 4, ../sass/main.sass */
 body {
-  background-color: green;
+  Background-color: gray;
 }
