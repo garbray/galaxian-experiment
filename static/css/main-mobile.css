@@ -62,16 +62,3 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
-
-/* line 4, ../sass/main.sass */
-body {
-  background-color: black;
-}
-
-/* line 7, ../sass/main.sass */
-canvas {
-  background: transparent;
-  left: 0;
-  position: absolute;
-  top: 0;
-}
