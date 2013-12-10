@@ -33,7 +33,7 @@ app.get('/', function(req, res){
   if(ua.match(/mobile/i)) {
     res.render('index_mobile.html');
   }else {
-    res.render('index.html');
+    res.render('game.html');
   }
 });
 

@@ -1,27 +1,29 @@
 <html>
-<head>
-	<meta charset="UTF-8">
-	<title>Galaxian experiment</title>
-	<link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-	<header>
-		<h1>desktop</h1>
-	</header>
-	<section>
-		
-	</section>
-	<footer>
-		
-	</footer>
-	<script src="/socket.io/socket.io.js"></script>
-	<script src="js/app.js"></script>
-	<script>
-		var socket = io.connect('hhtp://localhost');
-		socket.on('news', function(data) {
-			console.log(data);
-			socket.emit('my other event', {my: 'response'});
-		});
-	</script>
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<title>Galaxian experiment</title>
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/flat-ui.css">
+	</head>
+	<body>
+		<header>
+			<h1>desktop</h1>
+		</header>
+		<button class="btn btn-hg btn-primary">
+		  Boss Button
+		</button>
+		<footer>
+			
+		</footer>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="js/app.js"></script>
+		<script>
+			var socket = io.connect('hhtp://localhost');
+			socket.on('news', function(data) {
+				console.log(data);
+				socket.emit('my other event', {my: 'response'});
+			});
+		</script>
+	</body>
 </html>

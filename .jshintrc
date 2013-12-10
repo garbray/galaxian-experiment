@@ -6,6 +6,8 @@
   "eqeqeq": true,
   "undef": true,
   "globals": {
-    "jQuery": true
+    "jQuery": true,
+    "document": true,
+    "window": true
   }
 }
