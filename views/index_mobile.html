@@ -5,7 +5,29 @@
 </head>
 <body>
 	<header></header>
-	<section></section>
+	<section>
+		<form id="formJoin" action="#">
+			
+			<label for="socketId">Join Id</label>
+			<input id="socketId" type="text">
+			<button id="sendForm">
+				Join
+			</button>
+		</form>
+	</section>
 	<footer></footer>
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+		var socket = io.connect('hhtp://localhost'),
+				formJoin = document.getElementById('formJoin'),
+				sendForm = document.getElementById('sendForm');
+
+		formJoin.addEventListener('submit',function(e, data){
+			console.log(this);
+			console.log(data);
+			e.preventDefault();
+		});		
+		
+	</script>
 </body>
 </html>
